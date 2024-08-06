@@ -6,5 +6,9 @@ RUN npm install --production --silent && mv node_modules ../
 COPY . .
 EXPOSE 3000
 RUN chown -R node /usr/src/app
-USER node
+USER root
 CMD ["npm", "start"]
+RUN apk add --no-cache sqlite
+WORKDIR /app
+CMD ["sqlite3", "database.db"]
+
