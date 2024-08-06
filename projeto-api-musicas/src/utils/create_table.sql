@@ -1,0 +1,6 @@
+CREATE TABLE musicas (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome TEXT NOT NULL,
+  data_composicao TEXT NOT NULL,
+  link TEXT NOT NULL
+);
